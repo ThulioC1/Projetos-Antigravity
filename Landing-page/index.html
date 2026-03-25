@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Ona Architecture — Projetando para a vida cotidiana. Construções personalizadas, novas casas e extensões com design inovador.">
+  <title>Laís Lira Arquitetura — Projetando para a vida cotidiana</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#" class="header__logo" aria-label="Ona Architecture Home">
+        <!-- Logo SVG inline -->
+        <svg viewBox="0 0 62 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 72 V26 C4 8 14 2 24 2" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <line x1="24" y1="2" x2="24" y2="72" stroke="#fff" stroke-width="1.5" />
+          <line x1="44" y1="2" x2="44" y2="72" stroke="#fff" stroke-width="1.5" />
+          <line x1="24" y1="2" x2="44" y2="2" stroke="#fff" stroke-width="1.5" />
+          <path d="M24 38 C12 38 4 30 4 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M24 2 C42 2 56 16 56 34 C56 52 42 66 24 66" stroke="#fff" stroke-width="1.5"
+            stroke-linecap="round" />
+          <circle cx="32" cy="48" r="14" stroke="#fff" stroke-width="1.5" />
+          <line x1="4" y1="72" x2="58" y2="72" stroke="#fff" stroke-width="1.5" />
+        </svg>
+      </a>
+      <nav class="header__nav" id="main-nav" aria-label="Navegação principal">
+        <a href="#hero">Home</a>
+        <a href="#projects">Trabalhos</a>
+        <a href="#about">Sobre</a>
+        <a href="#testimonials">Blog</a>
+        <a href="#contact">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <img src="assets/images/hero-bg.png" alt="Casa moderna com piscina rodeada por natureza" loading="eager">
+      </div>
+      <div class="hero__content">
+        <h1 class="hero__title">Projetando para a<br>vida cotidiana</h1>
+        <p class="hero__subtitle">Blueprints Down Under</p>
+        <a href="#about" class="btn btn-outline">Ver mais &nbsp;&rarr;</a>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section class="services" id="services">
+      <div class="services__grid">
+
+        <!-- Service 1 -->
+        <article class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="12" width="28" height="32" rx="2" />
+              <path d="M12 12V6h24v38h-4" />
+              <line x1="12" y1="24" x2="24" y2="24" />
+              <line x1="12" y1="32" x2="20" y2="32" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">Contruções personalizadas</h3>
+          <p class="service-card__text">Dê vida à sua visão única. Nosso processo de design personalizado transforma
+            suas ideias em uma casa única, adaptada ao seu estilo de vida e preferências.</p>
+        </article>
+
+        <!-- Service 2 -->
+        <article class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 4L4 20v24h16V32h8v12h16V20L24 4Z" />
+              <line x1="20" y1="28" x2="28" y2="28" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">Novas casas</h3>
+          <p class="service-card__text">Dê vida à sua visão única. Nosso processo de design personalizado transforma
+            suas ideias em uma casa única, adaptada ao seu estilo de vida e preferências.</p>
+        </article>
+
+        <!-- Service 3 -->
+        <article class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="8" width="28" height="32" rx="2" />
+              <path d="M32 16h12v28H20" />
+              <polyline points="12,20 18,14 24,20" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">Extensões</h3>
+          <p class="service-card__text">Expanda seus horizontes sem mudar de endereço. Nossos projetos de extensão
+            integram-se perfeitamente à sua propriedade existente e agregam valor à sua casa.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__image">
+          <img src="assets/images/about-interior.png" alt="Interior moderno com sala de estar e vista panorâmica"
+            loading="lazy">
+        </div>
+        <div class="about__content">
+          <h2 class="about__title">Arquitetônico mais inovador e coerente com seu conceito</h2>
+          <p class="about__text">Uma ideia que pega as partes de uma estrutura e as transforma em um sistema completo. A
+            prática é a contemplação frequente e contínua do modo de execução de qualquer trabalho, ou da mera operação
+            das mãos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <h2 class="section-title">Nossos melhores projetos</h2>
+        <p class="section-subtitle">Projetos inovadores, impacto atemporal: nossos mais recentes empreendimentos
+          arquitetônicos</p>
+
+        <div class="projects__grid">
+
+          <!-- Project 1 -->
+          <article class="card project-card" id="project-maple-grove">
+            <div class="project-card__image">
+              <img src="assets/images/project-maple-grove.png" alt="Maple Grove Homes — casa moderna minimalista"
+                loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Maple Grove Homes</h3>
+              <p class="project-card__desc">A cozy development of 15 single-family homes nestled among mature maple
+                trees, offering a perfect blend of natural beauty.</p>
+              <a href="#" class="project-card__link">View Project</a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card project-card" id="project-greenwood">
+            <div class="project-card__image">
+              <img src="assets/images/project-greenwood.png" alt="Greenwood Commons — complexo residencial ecológico"
+                loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Greenwood Commons</h3>
+              <p class="project-card__desc">A modern complex of 30 eco-friendly houses along the riverside, featuring
+                shared green spaces and a community boathouse</p>
+              <a href="#" class="project-card__link">View Project</a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card project-card" id="project-parkview">
+            <div class="project-card__image">
+              <img src="assets/images/project-parkview.png" alt="Parkview Place — condomínios de luxo" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Parkview Place</h3>
+              <p class="project-card__desc">A boutique collection of 10 luxury condominiums overlooking the city's
+                central park, offering premium amenities and panoramic views.</p>
+              <a href="#" class="project-card__link">View Project</a>
+            </div>
+          </article>
+
+        </div>
+
+        <a href="#" class="btn btn-outline">Ver todos os projetos</a>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <h2 class="section-title">What our customers are saying</h2>
+        <p class="section-subtitle">Here's what people think about the Ona Architecture</p>
+
+        <div class="testimonials__grid">
+
+          <!-- Testimonial 1 -->
+          <article class="testimonial-card" id="testimonial-christine">
+            <div class="testimonial-card__header">
+              <div class="testimonial-card__avatar" role="img" aria-label="Christine Clark"></div>
+              <div class="testimonial-card__info">
+                <h4>Christine Clark</h4>
+                <p>CEO of Skyline</p>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-card__text">Ona Architecture's community-first approach set them apart. They listened
+              to residents' concerns and incorporated our feedback at every stage. The resulting community center has
+              become the heart of our neighborhood.</p>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="testimonial-card" id="testimonial-sarah">
+            <div class="testimonial-card__header">
+              <div class="testimonial-card__avatar" role="img" aria-label="Sarah Chen"></div>
+              <div class="testimonial-card__info">
+                <h4>Sarah Chen</h4>
+                <p>Horizon Properties</p>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-card__text">Ona Architecture transformed our vision into reality with their innovative
+              sustainable design approach. Their attention to detail and commitment to environmental consciousness
+              resulted in a building that not only looks stunning but also achieved LEED Platinum certification.</p>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="testimonial-card" id="testimonial-marcus">
+            <div class="testimonial-card__header">
+              <div class="testimonial-card__avatar" role="img" aria-label="Marcus Rodriguez"></div>
+              <div class="testimonial-card__info">
+                <h4>Marcus Rodriguez</h4>
+                <p>Metropolitan Council</p>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-card__text">Working with Ona Architecture on our downtown revitalization project was a
+              game-changer. Their ability to blend modern design with historical preservation created a perfect harmony
+              that has revitalized our city center.</p>
+          </article>
+
+          <!-- Testimonial 4 -->
+          <article class="testimonial-card" id="testimonial-emily">
+            <div class="testimonial-card__header">
+              <div class="testimonial-card__avatar" role="img" aria-label="Emily Weber"></div>
+              <div class="testimonial-card__info">
+                <h4>Emily Weber</h4>
+                <p>Tech Innovations</p>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-card__text">The team at Ona Architecture designed our new headquarters with incredible
+              vision. They created a space that perfectly reflects our company culture while maximizing productivity and
+              employee well-being. The result is simply breathtaking.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta__content">
+          <h2 class="cta__title">Discover how we can bring your architectural dreams to life.</h2>
+          <p class="cta__text">From concept to completion, we're with you every step of the way. Ready to start your
+            journey? Contact us today for a free consultation and let's create something extraordinary together.</p>
+          <ul class="cta__stats">
+            <li class="cta__stat">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="8,12 11,15 16,9" />
+              </svg>
+              25+ Years of Excellence
+            </li>
+            <li class="cta__stat">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="8,12 11,15 16,9" />
+              </svg>
+              1,564+ Satisfied Clients
+            </li>
+            <li class="cta__stat">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="8,12 11,15 16,9" />
+              </svg>
+              50 Industry Awards
+            </li>
+          </ul>
+          <a href="#" class="btn btn-primary">Let's Work Together &nbsp;&rarr;</a>
+        </div>
+        <div class="cta__images">
+          <div class="cta__img">
+            <img src="assets/images/cta-pool.png" alt="Casa com piscina — projeto arquitetônico" loading="lazy">
+          </div>
+          <div class="cta__img">
+            <img src="assets/images/project-parkview.png" alt="Cozinha moderna — projeto de interiores" loading="lazy">
+          </div>
+          <div class="cta__img cta__img--large">
+            <img src="assets/images/project-maple-grove.png" alt="Fachada moderna — projeto residencial" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__brand">
+        <a href="#" class="footer__logo" aria-label="Ona Architecture">
+          <svg viewBox="0 0 62 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 72 V26 C4 8 14 2 24 2" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <line x1="24" y1="2" x2="24" y2="72" stroke="#fff" stroke-width="1.5" />
+            <line x1="44" y1="2" x2="44" y2="72" stroke="#fff" stroke-width="1.5" />
+            <line x1="24" y1="2" x2="44" y2="2" stroke="#fff" stroke-width="1.5" />
+            <path d="M24 38 C12 38 4 30 4 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M24 2 C42 2 56 16 56 34 C56 52 42 66 24 66" stroke="#fff" stroke-width="1.5"
+              stroke-linecap="round" />
+            <circle cx="32" cy="48" r="14" stroke="#fff" stroke-width="1.5" />
+            <line x1="4" y1="72" x2="58" y2="72" stroke="#fff" stroke-width="1.5" />
+          </svg>
+        </a>
+        <div class="footer__contact">
+          <a href="mailto:hello@support.com">hello@support.com</a>
+          <a href="tel:+558391974440">83 9197-4440</a>
+        </div>
+      </div>
+      <div class="footer__right">
+        <nav class="footer__nav" aria-label="Navegação do rodapé">
+          <a href="#about">Sobre</a>
+          <a href="#contact">Contato</a>
+          <a href="#services">Serviços</a>
+          <a href="#projects">Trabalhos</a>
+        </nav>
+        <div class="footer__social">
+          <!-- Instagram -->
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="#fff" stroke-width="1.5" />
+              <circle cx="12" cy="12" r="5" fill="none" stroke="#fff" stroke-width="1.5" />
+              <circle cx="17.5" cy="6.5" r="1.5" fill="#fff" />
+            </svg>
+          </a>
+          <!-- WhatsApp -->
+          <a href="#" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2C6.48 2 2 6.27 2 11.42c0 1.86.56 3.59 1.52 5.04L2 22l5.72-1.49A10.08 10.08 0 0012 21.84c5.52 0 10-4.27 10-9.42S17.52 2 12 2z"
+                fill="none" stroke="#fff" stroke-width="1.5" />
+              <path
+                d="M8.5 10.5c.3.6 1.1 1.8 2.3 2.7 1.2.9 2 1.1 2.5 1.2.5.1 1-.2 1.2-.5.2-.3.5-.7.3-1-.2-.3-.4-.4-.7-.6-.3-.2-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.2.2-.4.2-.7.1"
+                fill="none" stroke="#fff" stroke-width="1.2" />
+            </svg>
+          </a>
+          <!-- Facebook -->
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" fill="none" stroke="#fff" stroke-width="1.5" />
+              <path d="M15 8h-2a3 3 0 00-3 3v2h-2v3h2v5h3v-5h2l1-3h-3v-2a1 1 0 011-1h2V8z" fill="#fff" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
