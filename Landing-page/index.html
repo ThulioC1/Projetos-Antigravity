@@ -30,6 +30,15 @@
       <a href="#" class="header__logo" aria-label="Ona Architecture Home">
         <img src="assets/images/logo-white.svg" alt="Ona Architecture" style="width: 48px; height: auto;">
       </a>
+      
+      <button class="header__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
       <nav class="header__nav" id="main-nav" aria-label="Navegação principal">
         <a href="#hero">Home</a>
         <a href="#projects">Trabalhos</a>
@@ -68,7 +77,7 @@
               <line x1="12" y1="32" x2="20" y2="32" />
             </svg>
           </div>
-          <h3 class="service-card__title">Contruções personalizadas</h3>
+          <h3 class="service-card__title">Construções personalizadas</h3>
           <p class="service-card__text">Dê vida à sua visão única. Nosso processo de design personalizado transforma
             suas ideias em uma casa única, adaptada ao seu estilo de vida e preferências.</p>
         </article>
@@ -82,8 +91,8 @@
             </svg>
           </div>
           <h3 class="service-card__title">Novas casas</h3>
-          <p class="service-card__text">Dê vida à sua visão única. Nosso processo de design personalizado transforma
-            suas ideias em uma casa única, adaptada ao seu estilo de vida e preferências.</p>
+          <p class="service-card__text">Projetos completos de ponta a ponta. Criamos residências contemporâneas desde o 
+            conceito inicial até a entrega das chaves, focando em sustentabilidade e eficiência.</p>
         </article>
 
         <!-- Service 3 -->
@@ -346,6 +355,19 @@
     </div>
   </footer>
 
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    const navToggle = document.querySelector('.header__toggle');
+    const mainNav = document.getElementById('main-nav');
+    
+    if (navToggle && mainNav) {
+      navToggle.addEventListener('click', () => {
+        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !isExpanded);
+        mainNav.classList.toggle('is-active');
+      });
+    }
+  </script>
 </body>
 
 </html>
