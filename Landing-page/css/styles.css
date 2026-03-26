@@ -179,13 +179,22 @@ ul {
    1. HEADER / NAVBAR
    ========================================================================== */
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
-  padding: 20px 0;
+  padding: 24px 0;
   border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  background-color: transparent;
+  transition: padding 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.header.is-scrolled {
+  padding: 16px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .header .container {
@@ -769,7 +778,9 @@ ul {
     right: -100%;
     width: 260px;
     height: 100vh;
-    background-color: var(--color-dark);
+    background-color: rgba(26, 26, 26, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;

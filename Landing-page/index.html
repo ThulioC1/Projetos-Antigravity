@@ -352,6 +352,7 @@
 
   <!-- ========== SCRIPTS ========== -->
   <script>
+    // Menu responsivo
     const navToggle = document.querySelector('.header__toggle');
     const mainNav = document.getElementById('main-nav');
 
@@ -362,6 +363,16 @@
         mainNav.classList.toggle('is-active');
       });
     }
+
+    // Cabecalho com blur no scroll
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('is-scrolled');
+      } else {
+        header.classList.remove('is-scrolled');
+      }
+    });
   </script>
 </body>
 
