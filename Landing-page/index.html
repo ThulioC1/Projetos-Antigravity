@@ -11,7 +11,9 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -21,6 +23,40 @@
 </head>
 
 <body>
+  <!-- ========== POPUP INFORMATIVO (FORMATURA) ========== -->
+  <div class="popup-overlay" id="graduation-popup" aria-hidden="true">
+    <div class="popup-content">
+      <button class="popup-close" id="popup-close" aria-label="Fechar">&times;</button>
+
+      <h2 class="popup-title">Convite de Formatura</h2>
+      <p class="popup-text">É com muita alegria que convido você para prestigiar minha formatura em Arquitetura e
+        Urbanismo!</p>
+
+      <div class="popup-address">
+        <strong>Endereço:</strong><br>
+        Vivant Club Residence<br>
+        R. Antônio de Souza Lopes, 100 - Catolé<br>
+        Campina Grande - PB, 58410-180<br>
+        <div style="margin-top: 8px; font-style: italic; opacity: 0.8;">Horário a definir</div>
+      </div>
+
+      <!-- Link simulando um mapa (Abre o Google Maps) -->
+      <a href="https://www.google.com/maps/search/?api=1&query=Vivant+Club+Residence,+Campina+Grande+-+PB"
+        target="_blank" rel="noopener noreferrer" class="popup-map-box">
+        <!-- A imagem do mapa de fundo. Salve a imagem enviada na pasta assets/images/ com o nome mapa-formatura.png -->
+        <img src="assets/images/MAPA.png" alt="Mapa Vivant Club Residence" class="popup-map-img">
+
+        <div class="popup-map-overlay">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Abrir nos apps de Mapa</span>
+        </div>
+      </a>
+    </div>
+  </div>
 
   <!-- ========== HEADER ========== -->
   <header class="header" id="header">
@@ -324,7 +360,8 @@
         </nav>
         <div class="footer__social">
           <!-- Instagram -->
-          <a href="https://www.instagram.com/laislira2108/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/laislira2108/" aria-label="Instagram" target="_blank"
+            rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="#fff" stroke-width="1.5" />
               <circle cx="12" cy="12" r="5" fill="none" stroke="#fff" stroke-width="1.5" />
@@ -332,10 +369,14 @@
             </svg>
           </a>
           <!-- WhatsApp -->
-          <a href="https://wa.me/558391974440?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20seus%20servir%C3%A7os!" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-              <path d="M16.5 16s-1.5 2-2.2 2-1.7-.8-2.6-1.7-1.4-2-2.3-2.6-2-1.5-2-2.2 2-1.5 2-1.5 1 .3 1.4 1 1 1.8 1.4 2 1.3 1.1 2 .7 1.3-1.6 1.7-2 1.1-1.3 1.6-.8.81.4 1 1 .2 1.5 0 2z"/>
+          <a href="https://wa.me/558391974440?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20seus%20servir%C3%A7os!"
+            aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              <path
+                d="M16.5 16s-1.5 2-2.2 2-1.7-.8-2.6-1.7-1.4-2-2.3-2.6-2-1.5-2-2.2 2-1.5 2-1.5 1 .3 1.4 1 1 1.8 1.4 2 1.3 1.1 2 .7 1.3-1.6 1.7-2 1.1-1.3 1.6-.8.81.4 1 1 .2 1.5 0 2z" />
             </svg>
           </a>
           <!-- Facebook -->
@@ -373,6 +414,30 @@
         header.classList.remove('is-scrolled');
       }
     });
+
+    // Popup de formatura
+    const popup = document.getElementById('graduation-popup');
+    const popupClose = document.getElementById('popup-close');
+
+    if (popup && popupClose) {
+      // Tempo para abrir o popup apos carregar o site (1 segundo)
+      setTimeout(() => {
+        popup.classList.add('is-active');
+        popup.setAttribute('aria-hidden', 'false');
+      }, 1000);
+
+      const closePopup = () => {
+        popup.classList.remove('is-active');
+        popup.setAttribute('aria-hidden', 'true');
+      };
+
+      popupClose.addEventListener('click', closePopup);
+
+      // Fecha o popup se clicar na parte escurecida (overlay) fora da caixinha
+      popup.addEventListener('click', (e) => {
+        if (e.target === popup) closePopup();
+      });
+    }
   </script>
 </body>
 
