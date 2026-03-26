@@ -939,4 +939,29 @@ ul {
   .cta__img--large {
     grid-column: auto;
   }
+
+  /* Popup adjustments for mobile */
+  .popup-content {
+    padding: 24px 20px;
+  }
+
+  .popup-title {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .popup-text {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+
+  .popup-address {
+    padding: 12px;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+
+  .popup-map-box {
+    height: 120px;
+  }
 }
