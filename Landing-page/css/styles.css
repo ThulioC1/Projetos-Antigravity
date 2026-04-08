@@ -901,3 +901,104 @@ ul {
     height: 120px;
   }
 }
+
+/* ==========================================================================
+   10. CONTACT PAGE STYLES
+   ========================================================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--gap-xl);
+  align-items: start;
+}
+
+.contact-form-container {
+  background: var(--color-bg-white);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-dark);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 14px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  background-color: var(--color-bg-light);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(184, 148, 140, 0.15);
+  background-color: var(--color-bg-white);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Tablet adjustments for contact-grid */
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-lg);
+  }
+}
+
+.contact-success-msg {
+  display: none;
+  text-align: center;
+  padding: 40px 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.contact-success-msg.is-active {
+  display: block;
+}
+
+.success-icon {
+  color: var(--color-accent);
+  margin-bottom: 24px;
+}
+
+.contact-success-msg h3 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 12px;
+}
+
+.contact-success-msg p {
+  color: var(--color-text);
+  margin-bottom: 32px;
+  font-size: 1.05rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
