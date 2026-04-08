@@ -490,65 +490,6 @@ ul {
   margin-top: var(--gap-md);
 }
 
-/* ==========================================================================
-   6. TESTIMONIALS SECTION
-   ========================================================================== */
-.testimonials {
-  padding: var(--section-padding);
-  background-color: var(--color-bg-light);
-  text-align: center;
-}
-
-.testimonials__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--gap-md);
-  margin-top: var(--gap-lg);
-}
-
-.testimonial-card {
-  text-align: left;
-  padding: 28px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  background: var(--color-bg-white);
-}
-
-.testimonial-card__header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
-}
-
-.testimonial-card__avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  object-fit: cover;
-  background-color: var(--color-primary-light);
-}
-
-.testimonial-card__info h4 {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 2px;
-}
-
-.testimonial-card__info p {
-  font-size: 0.78rem;
-  color: var(--color-text-light);
-}
-
-.testimonial-card .stars {
-  margin-bottom: 14px;
-}
-
-.testimonial-card__text {
-  font-size: 0.88rem;
-  color: var(--color-text);
-  line-height: 1.7;
-}
 
 /* ==========================================================================
    7. CTA SECTION
@@ -877,9 +818,6 @@ ul {
     grid-template-columns: 1fr 1fr;
   }
 
-  .testimonials__grid {
-    grid-template-columns: 1fr 1fr;
-  }
 
   .footer .container {
     grid-template-columns: 1fr;
@@ -929,9 +867,6 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .testimonials__grid {
-    grid-template-columns: 1fr;
-  }
 
   .cta__images {
     grid-template-columns: 1fr;
