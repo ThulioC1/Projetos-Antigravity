@@ -184,14 +184,14 @@ ul {
   left: 0;
   width: 100%;
   z-index: 100;
-  padding: 24px 0;
+  padding: 8px 0;
   border-bottom: 2px solid rgba(255, 255, 255, 0.4);
   background-color: transparent;
   transition: padding 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 .header.is-scrolled {
-  padding: 16px 0;
+  padding: 4px 0;
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -689,9 +689,9 @@ ul {
 
 .popup-content {
   background-color: var(--color-bg-light);
-  padding: 40px;
+  padding: 24px 24px 28px;
   border-radius: var(--radius-lg);
-  max-width: 450px;
+  max-width: 420px;
   width: 100%;
   text-align: center;
   position: relative;
@@ -721,29 +721,69 @@ ul {
   color: var(--color-dark);
 }
 
+/* Estilos mantidos para compatibilidade mas não utilizados */
 .popup-title {
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--color-dark);
-  margin-bottom: 12px;
+  display: none;
 }
 
 .popup-text {
-  font-size: 0.95rem;
-  color: var(--color-text);
-  margin-bottom: 24px;
+  display: none;
 }
 
 .popup-address {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 16px;
-  border-radius: var(--radius-sm);
-  font-size: 0.9rem;
-  color: var(--color-text);
-  margin-bottom: 24px;
-  line-height: 1.6;
-  border: 1px solid var(--color-border);
+  display: none;
+}
+
+/* Imagem do convite no popup */
+.popup-invite-img {
+  margin-bottom: 20px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.popup-invite-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+  object-fit: contain;
+}
+
+/* Grupo de botões do popup */
+.popup-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.popup-btn-confirm {
+  background-color: var(--color-dark);
+  color: var(--color-bg-white);
+  width: 100%;
+  justify-content: center;
+}
+
+.popup-btn-confirm:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.popup-btn-gift {
+  background-color: transparent;
+  color: var(--color-primary-dark);
+  border: 1.5px solid var(--color-primary);
+  width: 100%;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.popup-btn-gift:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg-white);
+  transform: translateY(-2px);
 }
 
 
@@ -879,24 +919,19 @@ ul {
   }
 
   /* Popup adjustments for mobile */
-  .popup-content {
-    padding: 24px 20px;
-  }
-
-  .popup-title {
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-  }
-
-  .popup-text {
-    font-size: 0.9rem;
-    margin-bottom: 16px;
-  }
-
-  .popup-address {
+  .popup-overlay {
     padding: 12px;
-    font-size: 0.85rem;
-    margin-bottom: 20px;
+    align-items: flex-end;
+  }
+
+  .popup-content {
+    padding: 16px 16px 20px;
+    border-radius: var(--radius-md) var(--radius-md) var(--radius-lg) var(--radius-lg);
+    max-width: 100%;
+  }
+
+  .popup-invite-img {
+    margin-bottom: 16px;
   }
 
   .popup-map-box {
