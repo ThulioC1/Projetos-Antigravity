@@ -693,6 +693,8 @@ ul {
   border-radius: var(--radius-lg);
   max-width: 420px;
   width: 100%;
+  max-height: 95vh;
+  overflow-y: auto;
   text-align: center;
   position: relative;
   box-shadow: var(--shadow-card-hover);
@@ -760,14 +762,17 @@ ul {
 }
 
 .popup-btn-confirm {
-  background-color: var(--color-dark);
-  color: var(--color-bg-white);
+  background-color: transparent;
+  color: var(--color-primary-dark);
+  border: 1.5px solid var(--color-primary);
   width: 100%;
   justify-content: center;
+  font-weight: 500;
 }
 
 .popup-btn-confirm:hover {
-  background-color: #333;
+  background-color: var(--color-primary);
+  color: var(--color-bg-white);
   transform: translateY(-2px);
 }
 
