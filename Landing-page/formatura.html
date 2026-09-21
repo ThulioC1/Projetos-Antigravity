@@ -78,7 +78,7 @@
           </div>
 
           <!-- Formulário RSVP -->
-          <form action="https://script.google.com/macros/s/AKfycbx5mXFUVIcdAKaQs9ORRW32SbIr1trXHp7DeqQBRgdTVCOY8eDzx8LevEoXL0tzdoaWdw/exec" method="POST" id="rsvp-form" class="contact-form">
+          <form action="https://script.google.com/macros/s/AKfycbx3jSv9YXRhs1ndufDUaHQdeRFzG8MCrhudcILI8of0JyV3OE9NQz7GZsXEWzhzyzYvgw/exec" method="POST" id="rsvp-form" class="contact-form">
             <div class="form-group">
               <label for="name">Seu Nome Completo</label>
               <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
@@ -152,20 +152,13 @@
         try {
           const response = await fetch(form.action, {
             method: 'POST',
-            body: data,
-            headers: {
-              'Accept': 'application/json'
-            }
+            body: data
           });
 
-          if (response.ok) {
-            form.style.display = 'none';
-            successMessage.classList.add('is-active');
-            form.reset();
-          } else {
-            const errorData = await response.json();
-            throw new Error(errorData.error || 'Erro ao enviar');
-          }
+          // O Google Apps Script faz um redirecionamento, então a resposta pode ser tratada mesmo sendo opaca.
+          form.style.display = 'none';
+          successMessage.classList.add('is-active');
+          form.reset();
         } catch (error) {
           alert('Ocorreu um erro ao confirmar sua presença. Por favor, tente novamente.');
         } finally {
