@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /formatura.html
+Disallow: /presentes.html
+
+Sitemap: https://laislira-arquitetura.vercel.app/sitemap.xml

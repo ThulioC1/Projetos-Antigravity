@@ -4,35 +4,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Confirme sua presença na formatura de Laís Lira.">
   <title>Confirmação de Presença — Laís Lira</title>
+  <meta name="description" content="Confirme sua presença na formatura de Laís Lira, Arquitetura e Urbanismo.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://laislira-arquitetura.vercel.app/formatura.html">
 
-  <!-- Google Fonts -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Confirmação de Presença — Laís Lira">
+  <meta property="og:description" content="Confirme sua presença e a de seus acompanhantes.">
+  <meta property="og:image" content="https://laislira-arquitetura.vercel.app/assets/images/convite-formatura.jpg">
+  <meta name="theme-color" content="#b8948c">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-
-  <!-- CSS -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <!-- ========== HEADER ========== -->
-  <header class="header" id="header">
+  <a href="#conteudo" class="sr-only">Pular para o conteúdo</a>
+
+  <header class="header">
     <div class="container">
-      <a href="index.html" class="header__logo" aria-label="Início Ona Arquitetura">
-        <img src="assets/images/logo.png" alt="Ona Architecture" style="width: 90px; height: auto;">
+      <a href="index.html" class="header__logo" aria-label="Laís Lira Arquitetura — Página inicial">
+        <img src="assets/images/logo.png" width="90" height="90" alt="Laís Lira Arquitetura">
       </a>
 
       <button class="header__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
         <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
-          stroke-linecap="round" stroke-linejoin="round">
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -49,62 +55,85 @@
     </div>
   </header>
 
-  <main>
-    <!-- ========== PAGE HEADER ========== -->
-    <section class="page-header"
-      style="background-color: var(--color-primary-dark); padding: 140px 0 80px; text-align: center; color: var(--color-bg-white);">
+  <main id="conteudo">
+    <section class="page-header">
       <div class="container">
-        <h1 class="page-title"
-          style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 600;">Confirmação de Presença</h1>
-        <p style="opacity: 0.9; max-width: 600px; margin: 10px auto 0;">Por favor, confirme sua presença e de seus acompanhantes para que eu possa organizar tudo com muito carinho.</p>
+        <h1 class="page-title">Confirmação de Presença</h1>
+        <p class="page-header__lead">Por favor, confirme sua presença e de seus acompanhantes para que eu possa
+          organizar tudo com muito carinho.</p>
       </div>
     </section>
 
-    <!-- ========== RSVP FORM ========== -->
-    <section class="rsvp-section" style="padding: 80px 0; background-color: var(--color-bg-light);">
-      <div class="container" style="max-width: 600px;">
+    <section class="page-section page-section--muted">
+      <div class="container narrow">
         <div class="contact-form-container">
-          <!-- Mensagem de Sucesso (oculta por padrao) -->
-          <div id="rsvp-success" class="contact-success-msg">
+          <div id="rsvp-success" class="contact-success-msg" aria-hidden="true">
             <div class="success-icon">
-              <svg viewBox="0 0 24 24" width="60" height="60" stroke="currentColor" stroke-width="2" fill="none">
+              <svg viewBox="0 0 24 24" width="60" height="60" stroke="currentColor" stroke-width="2" fill="none"
+                aria-hidden="true">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                 <polyline points="22,4 12,14.01 9,11.01"></polyline>
               </svg>
             </div>
-            <h3>Presença Confirmada!</h3>
-            <p>Obrigada por confirmar sua presença. Mal posso esperar para celebrar este dia especial com você!</p>
-            <a href="index.html" class="btn btn-outline-dark">Voltar ao Início</a>
+            <h3>Presença confirmada!</h3>
+            <p>Obrigada por confirmar. Mal posso esperar para celebrar este dia especial com você!</p>
+            <p class="form-backup">
+              Ficou na dúvida de algum nome ou quer incluir mais alguém? Me avise pelo WhatsApp:
+              <a href="https://wa.me/558391974440?text=Ol%C3%A1%2C%20acabei%20de%20confirmar%20minha%20presen%C3%A7a%20na%20formatura%20e%20queria%20ajustar%20alguma%20informa%C3%A7%C3%A3o."
+                target="_blank" rel="noopener noreferrer">falar no WhatsApp</a>.
+            </p>
+            <a href="index.html" class="btn btn-outline-dark">Voltar ao início</a>
           </div>
 
-          <!-- Formulário RSVP -->
-          <form action="https://script.google.com/macros/s/AKfycbx3jSv9YXRhs1ndufDUaHQdeRFzG8MCrhudcILI8of0JyV3OE9NQz7GZsXEWzhzyzYvgw/exec" method="POST" id="rsvp-form" class="contact-form">
+          <form action="https://script.google.com/macros/s/AKfycbzB4mObeQx6Zv29P8qDmB_grDlU9JaA4_m47191NmmrZcwxaW2556quiO9ODbmzHWqOEg/exec"
+            method="POST" id="rsvp-form" class="contact-form" data-source="rsvp" data-page="formatura">
             <div class="form-group">
-              <label for="name">Seu Nome Completo</label>
-              <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+              <label for="name">Seu nome completo</label>
+              <input type="text" id="name" name="name" placeholder="Digite seu nome" autocomplete="name" required>
             </div>
+
             <div class="form-group">
-              <label for="companions">Nomes dos Acompanhantes</label>
-              <textarea id="companions" name="companions" rows="4" placeholder="Se for levar alguém, coloque os nomes aqui (separados por vírgula). Se não for levar ninguém, pode deixar em branco."></textarea>
+              <label for="companions">Nomes dos acompanhantes</label>
+              <textarea id="companions" name="companions" rows="4"
+                placeholder="Se for levar alguém, coloque os nomes aqui (separados por vírgula). Se não for levar ninguém, pode deixar em branco."></textarea>
+              <p class="info-item__value">Quantidade: <span id="companions-count">1</span></p>
             </div>
-            <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%; justify-content: center;">Confirmar Presença</button>
+
+            <p class="form-error" data-form-error role="alert" tabindex="-1" hidden>
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <span>Não consegui registrar sua presença agora. Verifique sua conexão e tente novamente, ou confirme
+                pelo WhatsApp para não perder seu lugar.</span>
+            </p>
+
+            <button type="submit" class="btn btn-primary btn-block" data-label-loading="Enviando..."
+              data-label-idle="Confirmar presença">Confirmar presença</button>
+
+            <p class="form-backup">Prefere confirmar de outro jeito?
+              <a href="https://wa.me/558391974440?text=Ol%C3%A1%2C%20quero%20confirmar%20minha%20presen%C3%A7a%20na%20sua%20formatura!"
+                target="_blank" rel="noopener noreferrer">Confirmar pelo WhatsApp</a>.
+            </p>
           </form>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer" id="footer">
+  <footer class="footer">
     <div class="container">
       <div class="footer__brand">
-        <a href="index.html" class="footer__logo" aria-label="Início Ona Arquitetura">
-          <img src="assets/images/logo.png" alt="Laís Lira" style="width: 160px; height: auto;">
+        <a href="index.html" class="footer__logo" aria-label="Laís Lira Arquitetura — Página inicial">
+          <img src="assets/images/logo.png" width="160" height="160" alt="Laís Lira Arquitetura" loading="lazy">
         </a>
       </div>
       <div class="footer__right">
-        <nav class="footer__nav">
+        <nav class="footer__nav" aria-label="Navegação do rodapé">
           <a href="index.html">Início</a>
+          <a href="presentes.html">Presentes</a>
           <a href="sobre.html">Sobre</a>
           <a href="contato.html">Contato</a>
         </nav>
@@ -112,62 +141,7 @@
     </div>
   </footer>
 
-  <!-- ========== SCRIPTS ========== -->
-  <script>
-    // Menu responsivo
-    const navToggle = document.querySelector('.header__toggle');
-    const mainNav = document.getElementById('main-nav');
-
-    if (navToggle && mainNav) {
-      navToggle.addEventListener('click', () => {
-        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', !isExpanded);
-        mainNav.classList.toggle('is-active');
-      });
-    }
-
-    // Cabecalho com blur no scroll
-    const header = document.querySelector('.header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('is-scrolled');
-      } else {
-        header.classList.remove('is-scrolled');
-      }
-    });
-
-    // Envio do formulário via AJAX
-    const form = document.getElementById('rsvp-form');
-    const successMessage = document.getElementById('rsvp-success');
-    const submitBtn = document.getElementById('submit-btn');
-
-    if (form && successMessage && submitBtn) {
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        submitBtn.disabled = true;
-        submitBtn.innerText = 'Enviando...';
-
-        const data = new FormData(form);
-        try {
-          const response = await fetch(form.action, {
-            method: 'POST',
-            body: data
-          });
-
-          // O Google Apps Script faz um redirecionamento, então a resposta pode ser tratada mesmo sendo opaca.
-          form.style.display = 'none';
-          successMessage.classList.add('is-active');
-          form.reset();
-        } catch (error) {
-          alert('Ocorreu um erro ao confirmar sua presença. Por favor, tente novamente.');
-        } finally {
-          submitBtn.disabled = false;
-          submitBtn.innerText = 'Confirmar Presença';
-        }
-      });
-    }
-  </script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>

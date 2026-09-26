@@ -4,47 +4,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Laís Lira Arquitetura — Projetando para a vida cotidiana. Construções personalizadas, novas casas e extensões com design inovador.">
   <title>Laís Lira Arquitetura — Projetando para a vida cotidiana</title>
+  <meta name="description"
+    content="Laís Lira Arquitetura — Projetando para a vida cotidiana. Construções personalizadas, novas casas e extensões com design inovador em Campina Grande, PB.">
+  <link rel="canonical" href="https://laislira-arquitetura.vercel.app/">
 
-  <!-- Google Fonts -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Laís Lira Arquitetura">
+  <meta property="og:title" content="Laís Lira Arquitetura — Projetando para a vida cotidiana">
+  <meta property="og:description"
+    content="Construções personalizadas, novas casas e extensões com design inovador. Campina Grande, PB.">
+  <meta property="og:url" content="https://laislira-arquitetura.vercel.app/">
+  <meta property="og:image" content="https://laislira-arquitetura.vercel.app/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Laís Lira Arquitetura — Projetando para a vida cotidiana">
+  <meta name="twitter:description"
+    content="Construções personalizadas, novas casas e extensões com design inovador.">
+  <meta name="twitter:image" content="https://laislira-arquitetura.vercel.app/assets/images/og-image.jpg">
+  <meta name="theme-color" content="#b8948c">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/images/hero-bg.png" fetchpriority="high">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-
-  <!-- Styles -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <!-- ========== POPUP INFORMATIVO (FORMATURA) ========== -->
-  <div class="popup-overlay" id="graduation-popup" aria-hidden="true">
-    <div class="popup-content">
-      <button class="popup-close" id="popup-close" aria-label="Fechar">&times;</button>
+  <a href="#hero" class="sr-only">Pular para o conteúdo</a>
 
-      <!-- Imagem do Convite de Formatura -->
+  <div class="popup-overlay" id="graduation-popup" data-delay="1000" aria-hidden="true" hidden>
+    <div class="popup-content" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <button class="popup-close overlay-close" id="popup-close" data-close aria-label="Fechar convite">&times;</button>
+      <h2 class="sr-only" id="popup-title">Convite de formatura</h2>
+
       <div class="popup-invite-img">
-        <img src="assets/images/convite-formatura.png" alt="Convite de Formatura — Laís Lira">
+        <picture>
+          <source srcset="assets/images/convite-formatura.webp" type="image/webp">
+          <img src="assets/images/convite-formatura.jpg" width="840" height="1193"
+            alt="Convite de formatura de Laís Lira, Arquitetura e Urbanismo" fetchpriority="high">
+        </picture>
       </div>
 
-      <!-- Botões de ação -->
       <div class="popup-actions">
-        <a href="formatura.html" class="btn btn-primary popup-btn-confirm">
+        <a href="formatura.html" class="btn popup-btn-confirm">
           <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
           Confirme sua presença
         </a>
         <a href="presentes.html" class="btn popup-btn-gift">
           <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polyline points="20 12 20 22 4 22 4 12"></polyline>
             <rect x="2" y="7" width="20" height="5"></rect>
             <line x1="12" y1="22" x2="12" y2="7"></line>
@@ -55,33 +75,34 @@
         </a>
       </div>
 
-      <!-- Link do mapa (Abre o Google Maps) -->
-      <a href="https://www.google.com/maps/search/?api=1&query=Vivant+Club+Residence,+Campina+Grande+-+PB"
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Vivant+Club+Residence,+Campina+Grande+-+PB"
         target="_blank" rel="noopener noreferrer" class="popup-map-box">
-        <img src="assets/images/MAPA.png" alt="Mapa Vivant Club Residence" class="popup-map-img">
-        <div class="popup-map-overlay">
+        <picture>
+          <source srcset="assets/images/mapa.webp" type="image/webp">
+          <img src="assets/images/MAPA.png" width="1013" height="630" alt="Mapa do Vivant Club Residence"
+            class="popup-map-img" loading="lazy">
+        </picture>
+        <span class="popup-map-overlay">
           <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
             <circle cx="12" cy="10" r="3"></circle>
           </svg>
-          <span>Abrir nos apps de Mapa</span>
-        </div>
+          Abrir nos apps de Mapa
+        </span>
       </a>
-
     </div>
   </div>
 
-  <!-- ========== HEADER ========== -->
   <header class="header" id="header">
     <div class="container">
-      <a href="#" class="header__logo" aria-label="Início Ona Arquitetura">
-        <img src="assets/images/logo.png" alt="Ona Architecture" style="width: 90px; height: auto;">
+      <a href="index.html" class="header__logo" aria-label="Laís Lira Arquitetura — Página inicial">
+        <img src="assets/images/logo.png" width="90" height="90" alt="Laís Lira Arquitetura">
       </a>
 
       <button class="header__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
         <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
-          stroke-linecap="round" stroke-linejoin="round">
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -89,7 +110,7 @@
       </button>
 
       <nav class="header__nav" id="main-nav" aria-label="Navegação principal">
-        <a href="#hero">Início</a>
+        <a href="index.html" aria-current="page">Início</a>
         <a href="#projects">Trabalhos</a>
         <a href="sobre.html">Sobre</a>
         <a href="#services">Serviços</a>
@@ -98,12 +119,11 @@
     </div>
   </header>
 
-  <main>
-
-    <!-- ========== HERO ========== -->
-    <section class="hero" id="hero">
+  <main id="hero">
+    <section class="hero">
       <div class="hero__bg">
-        <img src="assets/images/hero-bg.png" alt="Casa moderna com piscina rodeada por natureza" loading="eager">
+        <img src="assets/images/hero-bg.png" width="640" height="640"
+          alt="Casa moderna com piscina rodeada por natureza" fetchpriority="high">
       </div>
       <div class="hero__content">
         <h1 class="hero__title">Projetando para a<br>vida cotidiana</h1>
@@ -112,14 +132,11 @@
       </div>
     </section>
 
-    <!-- ========== SERVICES ========== -->
-    <section class="services" id="services">
+    <section class="services" id="services" aria-label="Serviços">
       <div class="services__grid">
-
-        <!-- Service 1 -->
         <article class="service-card">
           <div class="service-card__icon">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <rect x="4" y="12" width="28" height="32" rx="2" />
               <path d="M12 12V6h24v38h-4" />
               <line x1="12" y1="24" x2="24" y2="24" />
@@ -131,10 +148,9 @@
             suas ideias em uma casa única, adaptada ao seu estilo de vida e preferências.</p>
         </article>
 
-        <!-- Service 2 -->
         <article class="service-card">
           <div class="service-card__icon">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M24 4L4 20v24h16V32h8v12h16V20L24 4Z" />
               <line x1="20" y1="28" x2="28" y2="28" />
             </svg>
@@ -144,10 +160,9 @@
             conceito inicial até a entrega das chaves, focando em sustentabilidade e eficiência.</p>
         </article>
 
-        <!-- Service 3 -->
         <article class="service-card">
           <div class="service-card__icon">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <rect x="4" y="8" width="28" height="32" rx="2" />
               <path d="M32 16h12v28H20" />
               <polyline points="12,20 18,14 24,20" />
@@ -157,11 +172,9 @@
           <p class="service-card__text">Expanda seus horizontes sem mudar de endereço. Nossos projetos de extensão
             integram-se perfeitamente à sua propriedade existente e agregam valor à sua casa.</p>
         </article>
-
       </div>
     </section>
 
-    <!-- ========== PROJECTS ========== -->
     <section class="projects" id="projects">
       <div class="container">
         <h2 class="section-title">Nossos melhores projetos</h2>
@@ -169,68 +182,65 @@
           arquitetônicos</p>
 
         <div class="projects__grid">
-
-          <!-- Project 1 -->
-          <article class="card project-card" id="project-maple-grove">
+          <article class="card project-card">
             <div class="project-card__image">
-              <img src="assets/images/project-maple-grove.png" alt="Maple Grove Homes — casa moderna minimalista"
-                loading="lazy">
+              <img src="assets/images/project-maple-grove.png" width="640" height="640"
+                alt="Maple Grove Homes — casas modernas minimalistas" loading="lazy" decoding="async">
             </div>
             <div class="project-card__body">
               <h3 class="project-card__title">Maple Grove Homes</h3>
               <p class="project-card__desc">Um refúgio acolhedor de 15 casas unifamiliares integradas a árvores nativas,
                 oferecendo uma mistura perfeita de beleza natural e arquitetura moderna.</p>
-              <a href="#" class="project-card__link">Ver Projeto</a>
+              <a href="contato.html" class="project-card__link">Ver Projeto</a>
             </div>
           </article>
 
-          <!-- Project 2 -->
-          <article class="card project-card" id="project-greenwood">
+          <article class="card project-card">
             <div class="project-card__image">
-              <img src="assets/images/project-greenwood.png" alt="Greenwood Commons — complexo residencial ecológico"
-                loading="lazy">
+              <img src="assets/images/project-greenwood.png" width="640" height="640"
+                alt="Greenwood Commons — complexo residencial ecológico" loading="lazy" decoding="async">
             </div>
             <div class="project-card__body">
               <h3 class="project-card__title">Greenwood Commons</h3>
               <p class="project-card__desc">Um complexo moderno de 30 casas sustentáveis à beira-rio, com espaços verdes
                 compartilhados e uma estrutura comunitária integrada.</p>
-              <a href="#" class="project-card__link">Ver Projeto</a>
+              <a href="contato.html" class="project-card__link">Ver Projeto</a>
             </div>
           </article>
 
-          <!-- Project 3 -->
-          <article class="card project-card" id="project-parkview">
+          <article class="card project-card">
             <div class="project-card__image">
-              <img src="assets/images/project-parkview.png" alt="Parkview Place — condomínios de luxo" loading="lazy">
+              <img src="assets/images/project-parkview.png" width="640" height="640"
+                alt="Parkview Place — condomínios de luxo" loading="lazy" decoding="async">
             </div>
             <div class="project-card__body">
               <h3 class="project-card__title">Parkview Place</h3>
               <p class="project-card__desc">Uma coleção exclusiva de 10 condomínios de luxo com vista para o parque
                 central da cidade, oferecendo comodidades premium e vistas panorâmicas.</p>
-              <a href="#" class="project-card__link">Ver Projeto</a>
+              <a href="contato.html" class="project-card__link">Ver Projeto</a>
             </div>
           </article>
-
         </div>
 
-        <a href="#" class="btn btn-outline">Ver todos os projetos</a>
+        <a href="contato.html" class="btn btn-outline">Ver todos os projetos</a>
       </div>
     </section>
 
-
-    <!-- ========== ABOUT SECTION ========== -->
     <section class="about" id="about">
       <div class="container">
         <div class="about__image">
-          <img src="assets/images/sobre.jpeg" alt="Foto de Lais Lira Arquiteta" loading="lazy">
+          <picture>
+            <source srcset="assets/images/sobre.webp" type="image/webp">
+            <img src="assets/images/sobre.jpeg" width="1200" height="1600" alt="Laís Lira, arquiteta"
+              loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="about__content">
           <h2 class="about__title">Olá! Sou Laís Lira, arquiteta apaixonada por transformar espaços em cenários de vida.
           </h2>
           <p class="about__text">
             Acredito que a arquitetura vai muito além de paredes e especificações técnicas; ela é o reflexo da
-            identidade
-            de quem a habita.
+            identidade de quem a habita.
             <br><br>
             Meu objetivo é criar projetos autorais, funcionais e que acolhem, onde a estética encontra o bem-estar. Mais
             do que projetar, quero acompanhar você na realização de um sonho, tornando o processo de obra leve e
@@ -242,8 +252,7 @@
       </div>
     </section>
 
-    <!-- ========== CTA ========== -->
-    <section class="cta" id="contact">
+    <section class="cta" id="contato">
       <div class="container">
         <div class="cta__content">
           <h2 class="cta__title">Descubra como podemos dar vida aos seus sonhos arquitetônicos.</h2>
@@ -254,26 +263,27 @@
         </div>
         <div class="cta__images">
           <div class="cta__img">
-            <img src="assets/images/cta-pool.png" alt="Casa com piscina — projeto arquitetônico" loading="lazy">
+            <img src="assets/images/cta-pool.png" width="640" height="640" alt="Casa com piscina em projeto arquitetônico"
+              loading="lazy" decoding="async">
           </div>
           <div class="cta__img">
-            <img src="assets/images/project-parkview.png" alt="Cozinha moderna — projeto de interiores" loading="lazy">
+            <img src="assets/images/project-parkview.png" width="640" height="640" alt="Cozinha moderna de projeto de interiores"
+              loading="lazy" decoding="async">
           </div>
           <div class="cta__img cta__img--large">
-            <img src="assets/images/project-maple-grove.png" alt="Fachada moderna — projeto residencial" loading="lazy">
+            <img src="assets/images/project-maple-grove.png" width="640" height="640" alt="Fachada moderna de projeto residencial"
+              loading="lazy" decoding="async">
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer" id="footer">
+  <footer class="footer">
     <div class="container">
       <div class="footer__brand">
-        <a href="#" class="footer__logo" aria-label="Ona Architecture">
-          <img src="assets/images/logo.png" alt="Ona Architecture" style="width: 160px; height: auto;">
+        <a href="index.html" class="footer__logo" aria-label="Laís Lira Arquitetura — Página inicial">
+          <img src="assets/images/logo.png" width="160" height="160" alt="Laís Lira Arquitetura" loading="lazy">
         </a>
         <div class="footer__contact">
           <a href="mailto:laislira.arq@gmail.com">laislira.arq@gmail.com</a>
@@ -281,38 +291,35 @@
         </div>
       </div>
       <div class="footer__right">
-        <nav class="footer__nav">
-          <a href="#hero">Início</a>
+        <nav class="footer__nav" aria-label="Navegação do rodapé">
+          <a href="index.html">Início</a>
           <a href="#projects">Projetos</a>
           <a href="#services">Serviços</a>
           <a href="sobre.html">Sobre</a>
         </nav>
         <div class="footer__social">
-          <!-- Instagram -->
-          <a href="https://www.instagram.com/laislira2108/" aria-label="Instagram" target="_blank"
+          <a href="https://www.instagram.com/laislira2108/" data-net="instagram" aria-label="Instagram" target="_blank"
             rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="#fff" stroke-width="1.5" />
-              <circle cx="12" cy="12" r="5" fill="none" stroke="#fff" stroke-width="1.5" />
-              <circle cx="17.5" cy="6.5" r="1.5" fill="#fff" />
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
             </svg>
           </a>
-          <!-- WhatsApp -->
           <a href="https://wa.me/558391974440?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20seus%20servir%C3%A7os!"
-            aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round">
+            data-net="whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path
                 d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
               <path
                 d="M16.5 16s-1.5 2-2.2 2-1.7-.8-2.6-1.7-1.4-2-2.3-2.6-2-1.5-2-2.2 2-1.5 2-1.5 1 .3 1.4 1 1 1.8 1.4 2 1.3 1.1 2 .7 1.3-1.6 1.7-2 1.1-1.3 1.6-.8.81.4 1 1 .2 1.5 0 2z" />
             </svg>
           </a>
-          <!-- Facebook -->
-          <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="10" fill="none" stroke="#fff" stroke-width="1.5" />
-              <path d="M15 8h-2a3 3 0 00-3 3v2h-2v3h2v5h3v-5h2l1-3h-3v-2a1 1 0 011-1h2V8z" fill="#fff" />
+          <a href="https://facebook.com" data-net="facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <path d="M15 8h-2a3 3 0 00-3 3v2h-2v3h2v5h3v-5h2l1-3h-3v-2a1 1 0 011-1h2V8z" fill="currentColor" />
             </svg>
           </a>
         </div>
@@ -320,54 +327,7 @@
     </div>
   </footer>
 
-  <!-- ========== SCRIPTS ========== -->
-  <script>
-    // Menu responsivo
-    const navToggle = document.querySelector('.header__toggle');
-    const mainNav = document.getElementById('main-nav');
-
-    if (navToggle && mainNav) {
-      navToggle.addEventListener('click', () => {
-        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', !isExpanded);
-        mainNav.classList.toggle('is-active');
-      });
-    }
-
-    // Cabecalho com blur no scroll
-    const header = document.querySelector('.header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('is-scrolled');
-      } else {
-        header.classList.remove('is-scrolled');
-      }
-    });
-
-    // Popup de formatura
-    const popup = document.getElementById('graduation-popup');
-    const popupClose = document.getElementById('popup-close');
-
-    if (popup && popupClose) {
-      // Tempo para abrir o popup apos carregar o site (1 segundo)
-      setTimeout(() => {
-        popup.classList.add('is-active');
-        popup.setAttribute('aria-hidden', 'false');
-      }, 1000);
-
-      const closePopup = () => {
-        popup.classList.remove('is-active');
-        popup.setAttribute('aria-hidden', 'true');
-      };
-
-      popupClose.addEventListener('click', closePopup);
-
-      // Fecha o popup se clicar na parte escurecida (overlay) fora da caixinha
-      popup.addEventListener('click', (e) => {
-        if (e.target === popup) closePopup();
-      });
-    }
-  </script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>
