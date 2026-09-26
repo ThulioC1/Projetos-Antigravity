@@ -885,7 +885,7 @@ a.info-item__value:hover {
   -webkit-backdrop-filter: blur(5px);
   z-index: 9999;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 20px;
   opacity: 0;
@@ -907,6 +907,7 @@ a.info-item__value:hover {
   max-width: 420px;
   width: 100%;
   flex: 0 0 auto;
+  margin: auto;
   text-align: center;
   position: relative;
   box-shadow: var(--shadow-card-hover);
@@ -921,7 +922,7 @@ a.info-item__value:hover {
 /* Fica no overlay, nunca dentro da area rolavel: sempre visivel e tocavel */
 .popup-close {
   position: absolute;
-  top: max(12px, env(safe-area-inset-top));
+  bottom: max(12px, env(safe-area-inset-bottom));
   right: 12px;
   z-index: 3;
   width: 44px;
@@ -949,7 +950,6 @@ a.info-item__value:hover {
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  background: #101b3d;
 }
 
 .popup-invite-img img {
@@ -958,7 +958,6 @@ a.info-item__value:hover {
   display: block;
   border-radius: var(--radius-md);
   object-fit: contain;
-  margin: 0 auto;
 }
 
 /* Grupo de botões do popup */
@@ -1594,8 +1593,7 @@ a.info-item__value:hover {
 
   /* Popup adjustments for mobile */
   .popup-overlay {
-    padding: 10px;
-    align-items: center;
+    padding: 10px 10px 66px;
   }
 
   .popup-content {
@@ -1605,17 +1603,12 @@ a.info-item__value:hover {
   }
 
   .popup-close {
-    top: max(8px, env(safe-area-inset-top));
-    right: 8px;
+    bottom: max(10px, env(safe-area-inset-bottom));
+    right: 10px;
   }
 
   .popup-invite-img {
     margin-bottom: 14px;
-  }
-
-  .popup-invite-img img {
-    max-height: 42vh;
-    max-height: 42dvh;
   }
 
   .popup-actions {
