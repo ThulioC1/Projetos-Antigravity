@@ -93,6 +93,43 @@ function createLayer({ overlay, initialFocus }) {
   return { open, close, closeIfActive };
 }
 
+function initNavDropdown() {
+  const dropdowns = Array.from(document.querySelectorAll('.nav-dropdown'));
+  if (!dropdowns.length) return;
+
+  const setOpen = (dd, open) => {
+    dd.classList.toggle('is-open', open);
+    const trigger = dd.querySelector('.nav-dropdown__trigger');
+    if (trigger) trigger.setAttribute('aria-expanded', String(open));
+  };
+
+  const closeAll = (except) => {
+    dropdowns.forEach((dd) => {
+      if (dd !== except) setOpen(dd, false);
+    });
+  };
+
+  dropdowns.forEach((dd) => {
+    const trigger = dd.querySelector('.nav-dropdown__trigger');
+    on(trigger, 'click', () => {
+      const open = !dd.classList.contains('is-open');
+      closeAll(dd);
+      setOpen(dd, open);
+    });
+  });
+
+  on(document, 'click', (e) => {
+    dropdowns.forEach((dd) => {
+      if (!dd.contains(e.target)) setOpen(dd, false);
+    });
+    if (e.target.closest('.header__toggle')) closeAll();
+  });
+  on(document, 'keydown', (e) => {
+    if (e.key === 'Escape') closeAll();
+  });
+  on(window, 'resize', () => closeAll());
+}
+
 function initNav() {
   const toggle = document.querySelector('.header__toggle');
   const nav = document.getElementById('main-nav');
@@ -169,12 +206,6 @@ function initPopup() {
   const layer = createLayer({ overlay, initialFocus: '#popup-close' });
   const delay = Number(overlay.dataset.delay || 1000);
   setTimeout(layer.open, delay);
-}
-
-function initBankModal() {
-  const overlay = document.getElementById('bank-modal-overlay');
-  if (!overlay) return null;
-  return createLayer({ overlay, initialFocus: '#bank-modal-close' });
 }
 
 async function postToGasAppsScript(form) {
@@ -324,7 +355,6 @@ function copyText(text) {
 function initPixCards() {
   const grid = document.getElementById('gifts-grid');
   if (!grid) return;
-  const bankModal = initBankModal();
 
   const CHECK = `<svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
 
@@ -353,7 +383,6 @@ function initPixCards() {
       btn.innerHTML = original;
       btn.disabled = false;
     }, 2600);
-    if (bankModal) setTimeout(bankModal.open, 450);
   });
 }
 
@@ -372,56 +401,15 @@ function initCompanionCounter() {
   update();
 }
 
-function initBankLinks() {
-  const list = document.querySelector('.bank-list');
-  if (!list) return;
-  let timer = null;
-
-  const clear = () => {
-    if (timer) {
-      clearInterval(timer);
-      timer = null;
-    }
-  };
-
-  on(window, 'pagehide', clear);
-  on(window, 'pageshow', clear);
-
-  on(list, 'click', (e) => {
-    const link = e.target.closest('.bank-btn');
-    if (!link) return;
-    const app = link.dataset.app;
-    const web = link.dataset.web;
-    if (!app) return;
-    e.preventDefault();
-    clear();
-
-    let leftPage = false;
-    const start = Date.now();
-    timer = setInterval(() => {
-      if (document.hidden) {
-        leftPage = true;
-        clear();
-      } else if (Date.now() - start > 1500) {
-        clear();
-        if (!leftPage && web) window.open(web, '_blank', 'noopener');
-      }
-    }, 150);
-
-    window.location.href = app;
-  });
-}
-
 function init() {
   initNav();
+  initNavDropdown();
   initHeaderScroll();
   initPopup();
   initContactForm();
   initRsvpForm();
   initCompanionCounter();
   initPixCards();
-  initBankModal();
-  initBankLinks();
 }
 
 if (document.readyState === 'loading') {

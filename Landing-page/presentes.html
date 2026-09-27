@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sugestão de Presentes — Laís Lira</title>
   <meta name="description"
-    content="Sugestão de presentes para a formatura de Laís Lira, Arquitetura e Urbanismo. Contribua com um presente em dinheiro via PIX.">
+    content="Sugestão de presentes para a formatura de Laís Lira, Arquitetura e Urbanismo. Dê um presente em mãos ou contribua com um presente em dinheiro via PIX.">
   <link rel="canonical" href="https://laislira-arquitetura.vercel.app/presentes.html">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Sugestão de Presentes — Laís Lira">
-  <meta property="og:description" content="Sua presença já é o maior presente. Se quiser celebrar, aqui vão sugestões via PIX.">
+  <meta property="og:description"
+    content="Sua presença já é o maior presente. Dê um presente em mãos ou celebre comigo com uma lembrança especial via PIX.">
   <meta property="og:image" content="https://laislira-arquitetura.vercel.app/assets/images/convite-formatura.jpg">
   <meta name="theme-color" content="#b8948c">
 
@@ -50,6 +51,21 @@
         <a href="index.html#projects">Trabalhos</a>
         <a href="sobre.html">Sobre</a>
         <a href="index.html#services">Serviços</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-dropdown__trigger" aria-expanded="false" aria-controls="menu-formatura"
+            aria-current="page">
+            Formatura
+            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.2" fill="none"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <ul class="nav-dropdown__menu" id="menu-formatura">
+            <li><a href="formatura.html">Confirmar presença</a></li>
+            <li><a href="presentes.html" aria-current="page">Presentes</a></li>
+            <li><a href="fotos.html">Fotos</a></li>
+          </ul>
+        </div>
         <a href="contato.html">Contato</a>
       </nav>
     </div>
@@ -71,19 +87,38 @@
         </p>
         <h1 class="gifts-hero__title">Sugestão de <span>Presentes</span></h1>
         <p class="gifts-hero__subtitle">
-          Sua presença já é o maior presente! Mas se quiser celebrar comigo com uma lembrança especial, aqui estão
-          algumas sugestões via PIX.
+          Sua presença já é o maior presente! Mas se quiser celebrar comigo com uma lembrança especial, escolha um
+          presente para entregar em mãos ou uma sugestão via PIX.
         </p>
       </div>
     </section>
 
     <section class="gifts-section">
       <div class="container">
-        <h2 class="section-title">Escolha um valor</h2>
-        <p class="section-subtitle">Clique em &ldquo;Copiar código PIX&rdquo; e cole no app do seu banco na opção
-          <strong>PIX Copia e Cola</strong>.</p>
+        <h2 class="section-title">Escolha como presentear</h2>
+        <p class="section-subtitle">Dê um presente em mãos ou contribua com um valor via PIX — basta copiar o código e
+          colar no app do seu banco na opção <strong>PIX Copia e Cola</strong>.</p>
 
         <div class="gifts-grid" id="gifts-grid">
+          <div class="gift-card gift-card--in-person">
+            <div class="gift-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </div>
+            <p class="gift-card__label">Presente em mãos</p>
+            <ul class="gift-card__options">
+              <li>Roupas formais</li>
+              <li>Acessórios</li>
+              <li>Skin Care</li>
+              <li>Maquiagens</li>
+              <li>Material de escritório</li>
+            </ul>
+          </div>
+
           <div class="gift-card">
             <div class="gift-card__icon">
               <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"
@@ -94,7 +129,8 @@
             </div>
             <p class="gift-card__label">Presente</p>
             <p class="gift-card__value">R$ 25</p>
-            <code class="gift-card__pix-code" id="pix-25">00020126360014BR.GOV.BCB.PIX0114+5583991974440520400005303986540525.005802BR5924Lais Lira Soares de Melo6009SAO PAULO62140510u2VNipUcGh6304A682</code>
+            <code class="gift-card__pix-code"
+              id="pix-25">00020126360014BR.GOV.BCB.PIX0114+5583991974440520400005303986540525.005802BR5924Lais Lira Soares de Melo6009SAO PAULO62140510u2VNipUcGh6304A682</code>
             <button type="button" class="gift-card__copy-btn" data-pix="pix-25">
               <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -115,7 +151,8 @@
             </div>
             <p class="gift-card__label">Presente</p>
             <p class="gift-card__value">R$ 50</p>
-            <code class="gift-card__pix-code" id="pix-50">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e95520400005303986540550.005802BR5924Lais Lira Soares de Melo6009SAO PAULO621405106jp510dHgJ630457E3</code>
+            <code class="gift-card__pix-code"
+              id="pix-50">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e95520400005303986540550.005802BR5924Lais Lira Soares de Melo6009SAO PAULO621405106jp510dHgJ630457E3</code>
             <button type="button" class="gift-card__copy-btn" data-pix="pix-50">
               <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -136,7 +173,8 @@
             </div>
             <p class="gift-card__label">Presente</p>
             <p class="gift-card__value">R$ 80</p>
-            <code class="gift-card__pix-code" id="pix-80">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e95520400005303986540580.005802BR5924Lais Lira Soares de Melo6009SAO PAULO62140510aYrTPojAM76304790A</code>
+            <code class="gift-card__pix-code"
+              id="pix-80">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e95520400005303986540580.005802BR5924Lais Lira Soares de Melo6009SAO PAULO62140510aYrTPojAM76304790A</code>
             <button type="button" class="gift-card__copy-btn" data-pix="pix-80">
               <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -157,7 +195,8 @@
             </div>
             <p class="gift-card__label">Presente</p>
             <p class="gift-card__value">R$ 100</p>
-            <code class="gift-card__pix-code" id="pix-100">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e955204000053039865406100.005802BR5924Lais Lira Soares de Melo6009SAO PAULO62140510eDJEG0mbtq630434E3</code>
+            <code class="gift-card__pix-code"
+              id="pix-100">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e955204000053039865406100.005802BR5924Lais Lira Soares de Melo6009SAO PAULO62140510eDJEG0mbtq630434E3</code>
             <button type="button" class="gift-card__copy-btn" data-pix="pix-100">
               <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -178,7 +217,8 @@
             </div>
             <p class="gift-card__label">Presente</p>
             <p class="gift-card__value">R$ 150</p>
-            <code class="gift-card__pix-code" id="pix-150">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e955204000053039865406150.005802BR5924Lais Lira Soares de Melo6009SAO PAULO62140510GVqt5PeVuI630492D6</code>
+            <code class="gift-card__pix-code"
+              id="pix-150">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e955204000053039865406150.005802BR5924Lais Lira Soares de Melo6009SAO PAULO62140510GVqt5PeVuI630492D6</code>
             <button type="button" class="gift-card__copy-btn" data-pix="pix-150">
               <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -199,7 +239,8 @@
             </div>
             <p class="gift-card__label">Presente</p>
             <p class="gift-card__value">R$ 200</p>
-            <code class="gift-card__pix-code" id="pix-200">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e955204000053039865406200.005802BR5924Lais Lira Soares de Melo6009SAO PAULO621405104aOTQexoqJ6304E908</code>
+            <code class="gift-card__pix-code"
+              id="pix-200">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e955204000053039865406200.005802BR5924Lais Lira Soares de Melo6009SAO PAULO621405104aOTQexoqJ6304E908</code>
             <button type="button" class="gift-card__copy-btn" data-pix="pix-200">
               <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -220,7 +261,8 @@
             </div>
             <p class="gift-card__label">Presente</p>
             <p class="gift-card__value">R$ 250</p>
-            <code class="gift-card__pix-code" id="pix-250">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e955204000053039865406250.005802BR5924Lais Lira Soares de Melo6009SAO PAULO62140510Ljw2L9yjR463045C6F</code>
+            <code class="gift-card__pix-code"
+              id="pix-250">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e955204000053039865406250.005802BR5924Lais Lira Soares de Melo6009SAO PAULO62140510Ljw2L9yjR463045C6F</code>
             <button type="button" class="gift-card__copy-btn" data-pix="pix-250">
               <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -241,7 +283,8 @@
             </div>
             <p class="gift-card__label">Presente</p>
             <p class="gift-card__value">R$ 500</p>
-            <code class="gift-card__pix-code" id="pix-500">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e955204000053039865406500.005802BR5924Lais Lira Soares de Melo6009SAO PAULO62140510GHGAt8xkkd63047A2B</code>
+            <code class="gift-card__pix-code"
+              id="pix-500">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e955204000053039865406500.005802BR5924Lais Lira Soares de Melo6009SAO PAULO62140510GHGAt8xkkd63047A2B</code>
             <button type="button" class="gift-card__copy-btn" data-pix="pix-500">
               <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -262,7 +305,8 @@
             </div>
             <p class="gift-card__label">Presente</p>
             <p class="gift-card__value">R$ 1.000</p>
-            <code class="gift-card__pix-code" id="pix-1000">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e9552040000530398654071000.005802BR5924Lais Lira Soares de Melo6009SAO PAULO62140510ThyenSzQbZ6304A7C7</code>
+            <code class="gift-card__pix-code"
+              id="pix-1000">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e9552040000530398654071000.005802BR5924Lais Lira Soares de Melo6009SAO PAULO62140510ThyenSzQbZ6304A7C7</code>
             <button type="button" class="gift-card__copy-btn" data-pix="pix-1000">
               <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -284,7 +328,8 @@
             </div>
             <p class="gift-card__label">Valor livre</p>
             <p class="gift-card__value">Qualquer valor</p>
-            <code class="gift-card__pix-code" id="pix-livre">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e955204000053039865802BR5924Lais Lira Soares de Melo6009SAO PAULO621405109Z2jP7fD5v63045C29</code>
+            <code class="gift-card__pix-code"
+              id="pix-livre">00020126580014BR.GOV.BCB.PIX013695291faa-7a2c-4561-a29a-440594f74e955204000053039865802BR5924Lais Lira Soares de Melo6009SAO PAULO621405109Z2jP7fD5v63045C29</code>
             <button type="button" class="gift-card__copy-btn" data-pix="pix-livre">
               <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -297,9 +342,10 @@
         </div>
 
         <div class="gifts-info-box">
-          <h3>Como presentear via PIX</h3>
-          <p>Clique em &ldquo;Copiar código PIX&rdquo; no valor desejado, abra o app do seu banco, vá em PIX e cole o
-            código na opção <strong>PIX Copia e Cola</strong>. Muito obrigada de coração!</p>
+          <h3>Como presentear</h3>
+          <p><strong>Presente em mãos:</strong> escolha um dos itens sugeridos e entregue pessoalmente para mim.</p>
+          <p><strong>Via PIX:</strong> clique em &ldquo;Copiar código PIX&rdquo; no valor desejado, abra o app do seu
+            banco, vá em PIX e cole o código na opção <strong>PIX Copia e Cola</strong>. Muito obrigada de coração!</p>
         </div>
 
         <div class="gifts-back">
@@ -313,7 +359,7 @@
     <div class="container">
       <div class="footer__brand">
         <a href="index.html" class="footer__logo" aria-label="Laís Lira Arquitetura — Página inicial">
-          <img src="assets/images/logo.png" width="160" height="160" alt="Laís Lira Arquitetura" loading="lazy">
+          <img src="assets/images/logo 2.png" width="160" height="160" alt="Laís Lira Arquitetura" loading="lazy">
         </a>
       </div>
       <div class="footer__right">
@@ -326,68 +372,6 @@
       </div>
     </div>
   </footer>
-
-  <div class="bank-modal-overlay" id="bank-modal-overlay" aria-hidden="true" hidden>
-    <div class="bank-modal" role="dialog" aria-modal="true" aria-labelledby="bank-modal-title">
-      <div class="bank-modal__handle"></div>
-      <div class="bank-modal__header">
-        <h2 class="bank-modal__title" id="bank-modal-title">Abrir no banco</h2>
-        <button type="button" class="bank-modal__close overlay-close" id="bank-modal-close" data-close
-          aria-label="Fechar">&times;</button>
-      </div>
-
-      <p class="bank-modal__subtitle">Código PIX copiado! Agora escolha seu banco:</p>
-
-      <p class="bank-modal__copied-badge">
-        <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2.5" fill="none"
-          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
-        Código PIX copiado com sucesso!
-      </p>
-
-      <div class="bank-list">
-        <a href="nubank://" class="bank-btn" data-app="nubank://" data-web="https://nubank.com.br">
-          <span class="bank-btn__logo" style="background:#820AD1;">N</span>
-          <span class="bank-btn__name">Nubank</span>
-        </a>
-        <a href="itau://" class="bank-btn" data-app="itau://" data-web="https://itau.com.br">
-          <span class="bank-btn__logo" style="background:#EC7000;">I</span>
-          <span class="bank-btn__name">Itaú</span>
-        </a>
-        <a href="bradesco://" class="bank-btn" data-app="bradesco://" data-web="https://banco.bradesco">
-          <span class="bank-btn__logo" style="background:#CC092F;">B</span>
-          <span class="bank-btn__name">Bradesco</span>
-        </a>
-        <a href="bb://" class="bank-btn" data-app="bb://" data-web="https://bb.com.br">
-          <span class="bank-btn__logo" style="background:#F8C200;"><span style="color:#003882;">BB</span></span>
-          <span class="bank-btn__name">Banco do Brasil</span>
-        </a>
-        <a href="caixa://" class="bank-btn" data-app="caixa://" data-web="https://caixa.gov.br">
-          <span class="bank-btn__logo" style="background:#005CA9;">C</span>
-          <span class="bank-btn__name">Caixa</span>
-        </a>
-        <a href="santander://" class="bank-btn" data-app="santander://" data-web="https://santander.com.br">
-          <span class="bank-btn__logo" style="background:#EC0000;">S</span>
-          <span class="bank-btn__name">Santander</span>
-        </a>
-        <a href="inter://" class="bank-btn" data-app="inter://" data-web="https://inter.co">
-          <span class="bank-btn__logo" style="background:#FF6B00;">I</span>
-          <span class="bank-btn__name">Inter</span>
-        </a>
-        <a href="c6bank://" class="bank-btn" data-app="c6bank://" data-web="https://c6bank.com.br">
-          <span class="bank-btn__logo" style="background:#242424;">C6</span>
-          <span class="bank-btn__name">C6 Bank</span>
-        </a>
-        <a href="picpay://" class="bank-btn" data-app="picpay://" data-web="https://picpay.com">
-          <span class="bank-btn__logo" style="background:#21C25E;">P</span>
-          <span class="bank-btn__name">PicPay</span>
-        </a>
-      </div>
-
-      <p class="bank-modal__hint">Cole o código em <strong>PIX &rarr; Pix Copia e Cola</strong> no app do seu banco.</p>
-    </div>
-  </div>
 
   <script src="js/main.js" defer></script>
 </body>
