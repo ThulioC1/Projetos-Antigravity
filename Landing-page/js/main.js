@@ -288,21 +288,11 @@ function initContactForm() {
     e.preventDefault();
     setFormState(form, 'loading');
     try {
-      const response = await fetch(form.action, {
+      await fetch(form.action, {
         method: 'POST',
         body: new FormData(form),
-        headers: { Accept: 'application/json' },
+        mode: 'no-cors'
       });
-      if (!response.ok) {
-        let detail = '';
-        try {
-          const data = await response.json();
-          detail = data.error || '';
-        } catch (_) {
-          detail = '';
-        }
-        throw new Error(detail || `HTTP ${response.status}`);
-      }
       form.reset();
       showSuccess(form);
     } catch (err) {
